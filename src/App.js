@@ -20,7 +20,8 @@ class App extends Component {
   }
 
   componentWillMount() {
-    request(BASE_URL, query).then(data => this.setState({data}));
+    request(BASE_URL, query)
+      .then(data => this.setState({data}));
   }
 
   render() {

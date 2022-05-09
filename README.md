@@ -35,4 +35,37 @@ To learn more about the React portion of this project, go [here](https://github.
     id, firstName, lastName, active
   }
 }
+
+---
+
+{
+  Student(id: 4) {
+    id
+    firstName
+    lastName
+    Courses{
+      id
+      name
+    }
+  }
+}
+
+OR
+
+{
+  Student(id:4) {
+    id
+    firstName
+    Courses {
+      ...course
+    }
+  }
+}
+
+fragment course on Course {
+  id
+  name
+  level
+}
 ```
+### Mutations
