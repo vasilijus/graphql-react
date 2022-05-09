@@ -20,5 +20,19 @@ $ npm start
 
 Then navigate to [http://localhost:3000](http://localhost:3000) in your browser.
 
+GraphQL url: [http://localhost:3100/graphql](http://localhost:3100/graphql)
+
 ## Create React App
 To learn more about the React portion of this project, go [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
+## Easy Querying
+```
+{
+  allCourses {
+    id
+  },
+  allStudents {
+    id, firstName, lastName, active
+  }
+}
+```
