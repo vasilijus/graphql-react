@@ -1,4 +1,12 @@
 module.exports = {
+  posts: [
+    { id: 1, title: "Lorem Ipsum", views: 254, student_id: 1 },
+    { id: 2, title: "Sic Dolor amet", views: 65, student_id: 3 },
+  ],
+  comments: [
+    { id: 987, post_id: 1, body: "Consectetur adipiscing elit", date: new Date('2017-07-03') },
+    { id: 995, post_id: 1, body: "Nam molestie pellentesque dui", date: new Date('2017-08-17') }
+  ],
   courses: [
     { id: 1, name: "Functional JavaScript", description: "Because FUN", level: "200", student_id: 4 },
     { id: 2, name: "Intro to HTML", description: "Start somewhere", level: "100", student_id: 4 },

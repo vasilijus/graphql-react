@@ -45,27 +45,45 @@ To learn more about the React portion of this project, go [here](https://github.
     lastName
     Courses{
       id
-      name
+      name  
     }
   }
 }
 
 OR
-
 {
-  Student(id:4) {
-    id
-    firstName
-    Courses {
-      ...course
-    }
-  }
+	firstStudent: Student(id: 1) { ...student }
+  lastStudnet: Student(id: 5) { ...student }
 }
-
+fragment student on Student {
+  id
+  firstName
+  lastName
+  active
+  Courses { ...course }
+}
 fragment course on Course {
   id
   name
-  level
+  description
 }
 ```
+Sorting
+```
+{
+  paginated: allCourses(page: 1,  perPage: 2){
+    id
+    name
+  }
+  sorted: allCourses (sortField: "id", sortOrder: "asc") {
+    id
+    name
+    description
+  }
+}
+```
+
+- Example with query / mutations
+https://github.com/marmelab/json-graphql-server
+
 ### Mutations
